@@ -3,16 +3,16 @@ package main.java.com.gfgIMPQuestions;
 public class C_FindKthMinElement {
 
 
-        static int findKthMinElement(int arr[], int n, int k) {
+        static int findKthMinElement(int[] arr, int n, int k) {
 
 
 
             for(int j=0;j<k;j++) {
                 for (int i = 0; i < n-1; i++) {
-                    if (arr[0 + i] < arr[1 + i]) {
-                        arr[0 + i] = arr[0 + i] + arr[1 + i];
-                        arr[1 + i] = arr[0 + i] - arr[1 + i];
-                        arr[0 + i] = arr[0 + i] - arr[1 + i];
+                    if (arr[i] < arr[1 + i]) {
+                        arr[i] = arr[i] + arr[1 + i];
+                        arr[1 + i] = arr[i] - arr[1 + i];
+                        arr[i] = arr[i] - arr[1 + i];
                     }
                 }
             }
