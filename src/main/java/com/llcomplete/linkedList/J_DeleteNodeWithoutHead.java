@@ -4,14 +4,22 @@ public class J_DeleteNodeWithoutHead extends A_LinkedList {
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 2};
-        ListNode ll = convertArrToLL(arr);
-        deleteNode(ll);
-        printLL(ll);
+//        int[] arr = {1, 2};
+//        ListNode ll = convertArrToLL(arr);
+//        printLL(ll);
     }
 
-    public static void deleteNode(ListNode listNode) {
-
+    public static void deleteNode(ListNode node) {
+        while(true)
+        {
+            node.data = node.next.data;
+            if(node.next.next==null) //last second node
+            {
+                node.next = null;
+                break;
+            }
+            node = node.next;
+        }
     }
 
 }
