@@ -2,10 +2,10 @@ package main.java.com.llcomplete.linkedList;
 
 public class G_YIntersectionPoint {
 
-    public static Node findIntersectingNode(Node headA, Node headB)
+    public static ListNode findIntersectingNode(ListNode headA, ListNode headB)
     {
-        Node temp1 = headA;
-        Node temp2 = headB;
+        ListNode temp1 = headA;
+        ListNode temp2 = headB;
         if(headA ==null || headB ==null)
         {
             return null;

@@ -1,11 +1,11 @@
 package main.java.com.stacknqueue;
 
-import main.java.com.llcomplete.linkedList.Node;
+import main.java.com.llcomplete.linkedList.ListNode;
 
 class Queue
 {
-    Node start;
-    Node end;
+    ListNode start;
+    ListNode end;
     int size;
     Queue()
     {
@@ -16,7 +16,7 @@ class Queue
 
     public void push(int x)
     {
-        Node temp = new Node(x);
+        ListNode temp = new ListNode(x);
         if(start == null)
         {
             start = temp;

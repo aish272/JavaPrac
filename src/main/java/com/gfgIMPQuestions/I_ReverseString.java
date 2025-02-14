@@ -6,5 +6,6 @@ public class I_ReverseString {
     {
         String s = "popsicle";
         s= s+s.charAt(0);
+        System.out.println(s);
     }
 }

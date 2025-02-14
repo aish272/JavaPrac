@@ -1,9 +1,9 @@
 package main.java.com.stacknqueue;
 
-import main.java.com.llcomplete.linkedList.Node;
+import main.java.com.llcomplete.linkedList.ListNode;
 
 class Stack{
-     Node top;
+     ListNode top;
     int size;
 
     Stack()
@@ -14,7 +14,7 @@ class Stack{
 
     public  void push(int x)
     {
-        Node temp = new Node(x);
+        ListNode temp = new ListNode(x);
         temp.next = top;
         top = temp;
         size++;

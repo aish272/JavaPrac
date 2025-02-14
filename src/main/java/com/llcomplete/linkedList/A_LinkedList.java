@@ -2,11 +2,11 @@ package main.java.com.llcomplete.linkedList;
 
 public class A_LinkedList {
 
-    public static Node convertArrToLL(int[] arr) {
-        Node head = new Node(arr[0]);
-        Node current = head;
+    public static ListNode convertArrToLL(int[] arr) {
+        ListNode head = new ListNode(arr[0]);
+        ListNode current = head;
         for (int i = 1; i < arr.length; i++) {
-            Node temp = new Node(arr[i]);
+            ListNode temp = new ListNode(arr[i]);
             current.next = temp;
             current = temp;
 
@@ -14,7 +14,7 @@ public class A_LinkedList {
         return head;
     }
 
-    public static int getSizeOfLL(Node ll) {
+    public static int getSizeOfLL(ListNode ll) {
         int size = 0;
         while (ll != null) {
             size++;
@@ -23,7 +23,7 @@ public class A_LinkedList {
         return size;
     }
 
-    public static void printLL(Node ll) {
+    public static void printLL(ListNode ll) {
         while (ll != null) {
             System.out.println(ll.data);
             ll = ll.next;
@@ -32,7 +32,7 @@ public class A_LinkedList {
 
     public static void main(String[] args) {
         int[] arr = {3, 6, 88, 0};
-        Node ll = convertArrToLL(arr);
+        ListNode ll = convertArrToLL(arr);
 
         //Print size of ll
         System.out.println("Size: " + getSizeOfLL(ll));
