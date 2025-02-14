@@ -1,10 +1,10 @@
 package main.java.com.llcomplete.linkedList;
 
 public class E_ReverseLinkedList extends A_LinkedList{
-    public static Node reverseLinkedList(Node head)
+    public static ListNode reverseLinkedList(ListNode head)
     {
         String llData = "";
-        Node temp = head;
+        ListNode temp = head;
         if(head!=null) {
             while (temp != null) {
                 llData = llData.concat(String.valueOf(temp.data));
@@ -31,7 +31,7 @@ public class E_ReverseLinkedList extends A_LinkedList{
     public static void main(String[] args)
     {
         int[] arr = {9,8,-7,6};
-        Node ll = convertArrToLL(arr);
+        ListNode ll = convertArrToLL(arr);
         printLL(ll);
         ll = reverseLinkedList(ll);
         printLL(ll);

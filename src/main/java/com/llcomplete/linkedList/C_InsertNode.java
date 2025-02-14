@@ -2,10 +2,10 @@ package main.java.com.llcomplete.linkedList;
 
 public class C_InsertNode extends A_LinkedList{
 
-    public static Node insertNode(Node head, int index, int insertionValue) {
+    public static ListNode insertNode(ListNode head, int index, int insertionValue) {
         if (head == null) {
             if (index == 0) {
-                return new Node(insertionValue);
+                return new ListNode(insertionValue);
             } else {
                 System.out.println("Head is null, value can only be inserted at 0 index.");
                 return  null;
@@ -13,16 +13,16 @@ public class C_InsertNode extends A_LinkedList{
         }
         else if(index == 0)
         {
-            return new Node(insertionValue,head);
+            return new ListNode(insertionValue,head);
         }
 
         int count = 0;
-        Node temp = head;
+        ListNode temp = head;
         while (temp != null) {
             count++;
             if (count == index - 1) {
-                Node newNode = new Node(insertionValue,temp.next);
-                temp.next = newNode;
+                ListNode newListNode = new ListNode(insertionValue,temp.next);
+                temp.next = newListNode;
             }
             temp = temp.next;
 
@@ -34,20 +34,20 @@ public class C_InsertNode extends A_LinkedList{
      * Instead of providing index, we provide value before which element has to be inserted. In both cases
      * we need to stop before the target index.
      */
-    public static Node insertElementBeforeValue(Node head, int nextValue, int insertionValue) {
+    public static ListNode insertElementBeforeValue(ListNode head, int nextValue, int insertionValue) {
         if (head == null) {
                 return  null;
         }
         else if(head.data == nextValue)
         {
-            return new Node(insertionValue,head);
+            return new ListNode(insertionValue,head);
         }
 
-        Node temp = head;
+        ListNode temp = head;
         while (temp.next != null) {
             if (nextValue == temp.next.data) {
-                Node newNode = new Node(insertionValue,temp.next);
-                temp.next = newNode;
+                ListNode newListNode = new ListNode(insertionValue,temp.next);
+                temp.next = newListNode;
                 break;
             }
             temp = temp.next;
@@ -64,7 +64,7 @@ public class C_InsertNode extends A_LinkedList{
         arr[1] = 9;
         arr[2] = 7;
         arr[3] = 77;
-        Node ll = convertArrToLL(arr);
+        ListNode ll = convertArrToLL(arr);
         ll = insertNode(ll,5,50);
         printLL(ll);
         System.out.println("/**************************Insert value before x value******************/");
