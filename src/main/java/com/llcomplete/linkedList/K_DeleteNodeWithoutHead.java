@@ -1,6 +1,6 @@
 package main.java.com.llcomplete.linkedList;
 
-public class J_DeleteNodeWithoutHead extends A_LinkedList {
+public class K_DeleteNodeWithoutHead extends A_LinkedList {
 
 
     public static void main(String[] args) {
