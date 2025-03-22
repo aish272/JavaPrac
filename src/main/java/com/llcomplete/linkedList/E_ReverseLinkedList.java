@@ -28,12 +28,36 @@ public class E_ReverseLinkedList extends A_LinkedList{
         return head;
 
     }
+
+    public static ListNode reverseLinkedListWithoutExtraSpace(ListNode head)
+    {
+        if(head!=null) {
+            ListNode current = null;
+            ListNode temp = head;
+            ListNode previous = null;
+            while (temp != null) {
+                current = temp;
+                temp = current.next;
+                current.next = previous;
+                previous = current;
+
+            }
+            head = current;
+            return head;
+        }
+        else
+        {
+            return null;
+        }
+         
+
+    }
     public static void main(String[] args)
     {
         int[] arr = {9,8,-7,6};
         ListNode ll = convertArrToLL(arr);
         printLL(ll);
-        ll = reverseLinkedList(ll);
+        ll = reverseLinkedListWithoutExtraSpace(ll);
         printLL(ll);
     }
 }
