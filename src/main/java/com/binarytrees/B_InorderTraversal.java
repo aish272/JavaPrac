@@ -22,6 +22,6 @@ public class B_InorderTraversal {
         TreeNode left = new TreeNode(2);
         TreeNode right = new TreeNode(rightL,rightR,3);
         TreeNode root = new TreeNode(left,right,1);
-        inorderTraversal(root);
+        System.out.println(inorderTraversal(root));
       }
 }

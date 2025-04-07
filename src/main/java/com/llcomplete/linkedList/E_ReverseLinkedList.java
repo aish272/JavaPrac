@@ -1,39 +1,79 @@
 package main.java.com.llcomplete.linkedList;
 
-public class E_ReverseLinkedList extends A_LinkedList{
-    public static ListNode reverseLinkedList(ListNode head)
-    {
+public class E_ReverseLinkedList extends A_LinkedList {
+    public static ListNode reverseLinkedList(ListNode head) {
         String llData = "";
         ListNode temp = head;
-        if(head!=null) {
+        if (head != null) {
             while (temp != null) {
                 llData = llData.concat(String.valueOf(temp.data));
                 llData = llData.concat(",");
                 temp = temp.next;
             }
-        }
-        else
-        {
+        } else {
             return null;
         }
         temp = head;
         System.out.println(llData);
-        String [] arr = llData.split(",");
-        for (int i =arr.length-1; i>=0; i--) {
+        String[] arr = llData.split(",");
+        for (int i = arr.length - 1; i >= 0; i--) {
 
-            temp.data = Integer.parseInt( arr[i]);
+            temp.data = Integer.parseInt(arr[i]);
 
             temp = temp.next;
         }
         return head;
 
     }
-    public static void main(String[] args)
-    {
-        int[] arr = {9,8,-7,6};
+
+    public static ListNode reverseLinkedListWithoutExtraSpace(ListNode head) {
+        if (head != null) {
+            ListNode current = null;
+            ListNode temp = head;
+            ListNode previous = null;
+            while (temp != null) {
+                current = temp;
+                temp = current.next;
+                current.next = previous;
+                previous = current;
+
+            }
+            head = current;
+            return head;
+        } else {
+            return null;
+        }
+
+
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {9, 8, -7, 6};
         ListNode ll = convertArrToLL(arr);
         printLL(ll);
-        ll = reverseLinkedList(ll);
+        ll = reverseList(ll);
         printLL(ll);
+    }
+
+    public static ListNode reverseList(ListNode head) {
+        if (head != null) {
+            ListNode current = null;
+            ListNode previous = null;
+            return reverseLinkedListWithoutExtraSpaceRecursive(current, head, previous);
+        } else {
+            return null;
+        }
+    }
+
+    private static ListNode reverseLinkedListWithoutExtraSpaceRecursive(ListNode current, ListNode temp, ListNode previous) {
+        if (temp == null) {
+            return current;
+        }
+        current = temp;
+        temp = current.next;
+        current.next = previous;
+        previous = current;
+        return reverseLinkedListWithoutExtraSpaceRecursive(current, temp, previous);
+
     }
 }
