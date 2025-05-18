@@ -23,8 +23,27 @@ public class E_Move0sToEnd {
             System.out.print(num+" ");
         }
     }
+    public static void moveZeroes1(int[] nums) {
+        int lastZero  = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i]==0&&nums[lastZero]!=0) {
+                lastZero = i;
+            }
+            if(nums[i]!=0 &&nums[lastZero]==0)
+            {
+                nums[lastZero] = nums[i];
+                nums[i] =0;
+                lastZero++;
+            }
+
+        }
+        for(int num:nums)
+        {
+            System.out.print(num+" ");
+        }
+    }
 
     public static void main(String args[]) {
-        moveZeroes(new int[]{0,1,0,3,12});
+        moveZeroes1(new int[]{1,0,2,0,3,0,4,0,5,0});
     }
 }
