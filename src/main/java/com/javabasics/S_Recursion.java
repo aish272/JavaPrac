@@ -1,4 +1,4 @@
-package com.javabasics;
+package main.java.com.javabasics;
 
 public class S_Recursion
 {
