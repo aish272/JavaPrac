@@ -36,6 +36,6 @@ public class F_GenerateParentheses {
     }
     public static void main(String[] args)
     {
-        generateParenthesis(2);
+        System.out.println(generateParenthesis(3));
     }
 }
