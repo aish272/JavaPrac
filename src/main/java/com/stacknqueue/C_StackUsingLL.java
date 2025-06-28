@@ -24,7 +24,7 @@ class Stack{
     public int pop()
     {
         if(top!=null) {
-            int ele = top.data;
+            int ele = top.val;
             top = top.next;
             size--;
             return ele;
@@ -35,7 +35,7 @@ class Stack{
     public int peek()
     {
         if(top!=null) {
-            return top.data;
+            return top.val;
         }
         return -1;
     }

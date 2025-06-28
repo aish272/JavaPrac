@@ -12,7 +12,7 @@ public class K_DeleteNodeWithoutHead extends A_LinkedList {
     public static void deleteNode(ListNode node) {
         while(true)
         {
-            node.data = node.next.data;
+            node.val = node.next.val;
             if(node.next.next==null) //last second node
             {
                 node.next = null;

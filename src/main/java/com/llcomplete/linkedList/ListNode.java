@@ -3,20 +3,20 @@ package main.java.com.llcomplete.linkedList;
 public class ListNode {
 
 
-        public int data;
+        public int val;
         public ListNode next;
 
-        public ListNode(int data) {
-            this.data = data;
+        public ListNode(int val) {
+            this.val = val;
             this.next = null;
         }
 
         ListNode() {
-            this.data = 0;
+            this.val = 0;
             this.next = null;
         }
-        ListNode(int data, ListNode listNode) {
-            this.data = data;
+        ListNode(int val, ListNode listNode) {
+            this.val = val;
             this.next = listNode;
         }
 

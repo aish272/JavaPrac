@@ -1,6 +1,4 @@
-package com.javabasics;
-
-import java.util.Arrays;
+package main.java.com.javabasics;
 
 public class A_literals {
 

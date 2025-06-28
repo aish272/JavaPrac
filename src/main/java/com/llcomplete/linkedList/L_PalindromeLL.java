@@ -14,7 +14,7 @@ public class L_PalindromeLL extends A_LinkedList {
         StringBuilder s = new StringBuilder();
         while(temp!=null)
         {
-            s.append(temp.data);
+            s.append(temp.val);
             temp = temp.next;
         }
         for(int counter=0;counter<s.length()/2;counter++)

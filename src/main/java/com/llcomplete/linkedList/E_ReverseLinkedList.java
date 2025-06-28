@@ -6,7 +6,7 @@ public class E_ReverseLinkedList extends A_LinkedList {
         ListNode temp = head;
         if (head != null) {
             while (temp != null) {
-                llData = llData.concat(String.valueOf(temp.data));
+                llData = llData.concat(String.valueOf(temp.val));
                 llData = llData.concat(",");
                 temp = temp.next;
             }
@@ -18,7 +18,7 @@ public class E_ReverseLinkedList extends A_LinkedList {
         String[] arr = llData.split(",");
         for (int i = arr.length - 1; i >= 0; i--) {
 
-            temp.data = Integer.parseInt(arr[i]);
+            temp.val = Integer.parseInt(arr[i]);
 
             temp = temp.next;
         }
