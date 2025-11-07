@@ -20,7 +20,7 @@ public class K_LongestSubArrayWithSumK {
 
             }
             if (!preFixSum.containsKey(sumEqualToK)) {
-                preFixSum.put(sumEqualToK, counter);  // no need to put sum which already exists
+                preFixSum.put(sumEqualToK, counter);  // no need to put sum which already exists because we need the first occurrence to get the longest subarray
             }
 
         }

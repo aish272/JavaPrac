@@ -86,6 +86,6 @@ public class J_LongestCommonSubsequence {
 
     public static void main(String[] args) {
 
-        System.out.println(longestCommonSubsequenceTab("de","ee"));
+        System.out.println(longestCommonSubsequenceDP("beaede","bad"));
     }
 }

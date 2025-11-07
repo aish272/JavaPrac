@@ -43,7 +43,28 @@ public class E_Move0sToEnd {
         }
     }
 
+    public static void mov0ToEnd(int[] arr)
+    {
+        int i =0;
+        int j =0;
+        while(j<arr.length)
+        {
+            if(arr[i]==0&&arr[j]!=0)
+            {
+                arr[i] = arr[j];
+                arr[j] = 0;
+                i++;
+            }
+            if(arr[i]!=0)
+            {
+                i++;
+            }
+            j++;
+        }
+
+    }
+
     public static void main(String args[]) {
-        moveZeroes1(new int[]{1,0,2,0,3,0,4,0,5,0});
+        mov0ToEnd(new int[]{1,0,2,0,3,0,4,0,5,0});
     }
 }
