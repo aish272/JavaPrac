@@ -3,7 +3,7 @@ package main.java.com.bst;
 import main.java.com.binarytrees.TreeNode;
 import main.java.com.llcomplete.linkedList.ListNode;
 
-public class O_ConvertSortedLLToBST {
+public class M_ConvertSortedLLToBST {
 
     /**
      * <a href="https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree">109. Convert Sorted List to Binary Search Tree</a>
