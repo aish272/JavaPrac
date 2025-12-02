@@ -1,9 +1,11 @@
-package main.java.com.binarytrees;
+package main.java.com.binarytrees2;
+
+import main.java.com.binarytrees.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class ZB_SumRootLeafNumbers {
+public class B_SumRootLeafNumbers {
 
     /**
      * <a href="https://leetcode.com/problems/sum-root-to-leaf-numbers">129. Sum Root to Leaf Numbers</a>
