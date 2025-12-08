@@ -2,7 +2,7 @@ package main.java.com.dp;
 
 import java.util.Arrays;
 
-public class W_DltOperationfor2Strngs {
+public class W_DltOperationFor2Strings {
 
     /**
      * <a href="https://leetcode.com/problems/delete-operation-for-two-strings/description/">583. Delete Operation for Two Strings</a>
