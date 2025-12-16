@@ -3,7 +3,9 @@ package main.java.com.llcomplete.linkedList;
 import static main.java.com.llcomplete.linkedList.A_LinkedList.convertArrToLL;
 
 public class T_DeleteNodesFromLLPresentInArr {
-
+    /**
+     * <a href="https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/description/">3217. Delete Nodes From Linked List Present in Array</a>
+     */
     public static ListNode modifiedList(int[] nums, ListNode head) {
 
         int max = Integer.MIN_VALUE;
