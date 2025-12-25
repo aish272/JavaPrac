@@ -2,6 +2,9 @@ package main.java.com.arrays2;
 
 public class J_Third_maximum_number {
 
+    /**
+     * <a href="https://leetcode.com/problems/third-maximum-number/">414. Third Maximum Number</a>
+     */
     public static int thirdMax(int[] nums) {
 
         int first = Integer.MIN_VALUE;
