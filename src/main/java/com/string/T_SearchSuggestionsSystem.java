@@ -5,6 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class T_SearchSuggestionsSystem {
+
+    /**
+     * <a href="https://leetcode.com/problems/search-suggestions-system/">1268. Search Suggestions System</a>
+     */
+
     public static List<List<String>> suggestedProducts(String[] products, String searchWord) {
 
         Arrays.sort(products);
