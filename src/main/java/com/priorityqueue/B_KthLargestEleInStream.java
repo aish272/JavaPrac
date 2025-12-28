@@ -5,7 +5,6 @@ import java.util.PriorityQueue;
 
 /**
  * <a href="https://leetcode.com/problems/kth-largest-element-in-a-stream/description/">703. Kth Largest Element in a Stream</a>
- * <br/>
  */
 class KthLargest {
     PriorityQueue<Integer> pq;
