@@ -2,7 +2,7 @@ package main.java.com.llcomplete.linkedList;
 
 import java.util.Stack;
 
-public class W_Add2Nums2 {
+public class W_Add2Nums_2 {
 
     /**
      * <a href="http://leetcode.com/problems/add-two-numbers-ii/description/">445. Add Two Numbers II</a>
