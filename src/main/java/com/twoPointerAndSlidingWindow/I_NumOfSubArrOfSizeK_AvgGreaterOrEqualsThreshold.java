@@ -30,5 +30,32 @@ public class I_NumOfSubArrOfSizeK_AvgGreaterOrEqualsThreshold {
 
     }
 
+    public int numOfSubarraysBetter(int[] arr, int k, int threshold) {
+
+        int left = 0;
+        int right = k - 1;
+        int ans = 0;
+        int sum = 0;
+        int count = 0;
+        while (count < k) {
+            sum += arr[left + count];
+            count++;
+        }
+        while (right < arr.length) {
+            if (left > 0) {
+                sum -= arr[left - 1];
+                sum += arr[right];
+            }
+
+            if ((sum / k) >= threshold) {
+                ans++;
+            }
+            left++;
+            right++;
+        }
+        return ans;
+
+    }
+
 
 }
