@@ -1,6 +1,6 @@
 package main.java.com.twoPointerAndSlidingWindow;
 
-public class H_SubArrayProductLessThank {
+public class H_SubArrayProductLessThanK {
 
     /**
      * <a href="https://leetcode.com/problems/subarray-product-less-than-k/">713. Subarray Product Less Than K</a>
