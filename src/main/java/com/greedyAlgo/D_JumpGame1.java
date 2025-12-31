@@ -4,7 +4,9 @@ public class D_JumpGame1 {
 
     /**
      * <a href="https://leetcode.com/problems/jump-game/">55. Jump Game</a>
-     **/
+     * <br/>
+     * <a href="https://www.youtube.com/watch?v=tZAa_jJ3SwQ">Video solution link</a>
+     * */
     public static boolean canJump(int[] nums) {
 
         if (nums.length == 1) {
@@ -21,9 +23,6 @@ public class D_JumpGame1 {
             }
             if (newReach > reach) {
                 reach = newReach;
-
-            } else {
-                newReach = reach;
 
             }
             if (reach >= nums.length - 1) {
