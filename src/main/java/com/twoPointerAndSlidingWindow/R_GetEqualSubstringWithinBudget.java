@@ -1,6 +1,6 @@
 package main.java.com.twoPointerAndSlidingWindow;
 
-public class R_GetEqualSubStringWithinBudget
+public class R_GetEqualSubstringWithinBudget
 {
     /**
      * <a href="https://leetcode.com/problems/get-equal-substrings-within-budget/description/">1208. Get Equal Substrings Within Budget</a>
