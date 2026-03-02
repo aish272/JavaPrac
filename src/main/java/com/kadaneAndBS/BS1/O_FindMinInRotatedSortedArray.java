@@ -1,4 +1,4 @@
-package main.java.com.kadaneAndBS;
+package main.java.com.kadaneAndBS.BS1;
 
 public class O_FindMinInRotatedSortedArray {
 

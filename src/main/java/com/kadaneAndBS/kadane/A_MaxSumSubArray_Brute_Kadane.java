@@ -1,4 +1,4 @@
-package main.java.com.kadaneAndBS;
+package main.java.com.kadaneAndBS.kadane;
 
 import org.jetbrains.annotations.NotNull;
 

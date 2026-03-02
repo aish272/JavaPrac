@@ -1,20 +1,20 @@
-package main.java.com.kadaneAndBS;
+package main.java.com.kadaneAndBS.BS1;
 
-public class C_LowerBound {
+public class D_UpperBound {
 
-    public static int returnLowerBoundIndex(int []arr, int lengthOfArray, int x)
+    public static int returnUpperBoundIndex(int []arr, int size, int target)
     {
         int low =0;
-        int high = lengthOfArray -1;
+        int high = size -1;
         int mid;
-        int lb = lengthOfArray;
+        int lb = size;
         while(low<=high) {
             mid = (low+high)/2;
-            if (arr[mid] >= x) {
+            if (arr[mid] > target) {
                 lb = mid;
                 high = mid - 1;
             }
-            else if (arr[mid] < x) {
+            else  {
                 low = mid + 1;
             }
         }
@@ -23,6 +23,6 @@ public class C_LowerBound {
     public static void main(String [] args)
     {
         int[] arr = {1, 4, 7, 8, 10};
-        System.out.println(returnLowerBoundIndex(arr, 4,5));
+        System.out.println(returnUpperBoundIndex(arr, 5,7));
     }
 }
