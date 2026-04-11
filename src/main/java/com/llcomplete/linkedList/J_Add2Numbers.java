@@ -8,13 +8,13 @@ public class J_Add2Numbers extends A_LinkedList {
         ListNode temp = l1;
         while (temp!=null)
         {
-            num1.append(temp.data);
+            num1.append(temp.val);
             temp = temp.next;
         }
         temp = l2;
         while (temp!=null)
         {
-            num2.append(temp.data);
+            num2.append(temp.val);
             temp = temp.next;
         }
         num1.reverse();

@@ -9,6 +9,11 @@ public class E_Operators {
         f1 += 8;
         System.out.println("New value of f1 "+f1);
 
+        System.out.println(5.0/2); //2.5
+        System.out.println(5/2.0); //2.5
+        System.out.println(5.0/2.0); //2.5
+        System.out.println(5/2); //2
+
         //Relational Operator
 
         boolean b1 = 8>9;

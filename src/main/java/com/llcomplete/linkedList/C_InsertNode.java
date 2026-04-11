@@ -38,14 +38,14 @@ public class C_InsertNode extends A_LinkedList{
         if (head == null) {
                 return  null;
         }
-        else if(head.data == nextValue)
+        else if(head.val == nextValue)
         {
             return new ListNode(insertionValue,head);
         }
 
         ListNode temp = head;
         while (temp.next != null) {
-            if (nextValue == temp.next.data) {
+            if (nextValue == temp.next.val) {
                 ListNode newListNode = new ListNode(insertionValue,temp.next);
                 temp.next = newListNode;
                 break;

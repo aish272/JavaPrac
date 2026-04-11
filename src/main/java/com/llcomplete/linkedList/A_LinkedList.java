@@ -25,7 +25,7 @@ public class A_LinkedList {
 
     public static void printLL(ListNode ll) {
         while (ll != null) {
-            System.out.println(ll.data);
+            System.out.println(ll.val);
             ll = ll.next;
         }
     }

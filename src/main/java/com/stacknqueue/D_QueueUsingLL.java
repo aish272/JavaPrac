@@ -36,7 +36,7 @@ class Queue
         {
             return -1;
         }
-        int ele = start.data;
+        int ele = start.val;
         start = start.next;
         // last element was popped out, end has to point to null too.
         // So that garbage collector can delete last location
@@ -55,7 +55,7 @@ class Queue
             return -1;
         }
 
-        return start.data;
+        return start.val;
 
     }
     public int getSize()

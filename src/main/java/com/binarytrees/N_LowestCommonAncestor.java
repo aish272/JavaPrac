@@ -1,9 +1,5 @@
 package main.java.com.binarytrees;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.TreeMap;
-
 class rowNode {
     int row;
     TreeNode node;
@@ -16,15 +12,10 @@ class rowNode {
 
 public class N_LowestCommonAncestor {
 
-
+    /**
+     * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/">236. Lowest Common Ancestor of a Binary Tree</a>
+     */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-
-//        TreeMap<Integer, LinkedList<Integer>> map1 = findPath(root,p);
-//        TreeMap<Integer, LinkedList<Integer>> map2 = findPath(root,q);
-//        while (!map1.isEmpty()||!map2.isEmpty())
-//        {
-//            map1.get(map1.firstKey()).stream().
-//        }
         if(root==null||root==p||root==q)
         {
             return root;
@@ -39,30 +30,5 @@ public class N_LowestCommonAncestor {
         return root;
 
 
-    }
-
-
-    public TreeMap<Integer, LinkedList<Integer>> findPath(TreeNode root, TreeNode pathToFind) {
-
-        TreeMap<Integer, LinkedList<Integer>> map = new TreeMap<>();
-            Queue<rowNode> queueWithTuple = new LinkedList<>();
-            queueWithTuple.offer(new rowNode(0, root));
-            while (!queueWithTuple.isEmpty()) {
-                rowNode tuple = queueWithTuple.poll();
-                TreeNode node = tuple.node;
-                int row = tuple.row;
-                if (!map.containsKey(row)) {
-                    map.put(row, new LinkedList<>());
-                }
-                map.get(row).add(node.val);
-                if (node.val == pathToFind.val) return map;
-                if (node.left != null) {
-                    queueWithTuple.offer(new rowNode(row - 1, node.left));
-                }
-                if (node.right != null) {
-                    queueWithTuple.offer(new rowNode(row + 1, node.right));
-                }
-            }
-        return map;
     }
 }

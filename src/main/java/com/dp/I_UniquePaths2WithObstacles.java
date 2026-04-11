@@ -97,6 +97,8 @@ public class I_UniquePaths2WithObstacles {
             {
                 dp[i] = temp[i];
             }
+            String s = "";
+            s.substring(0,9);
         }
         return dp[n-1];
     }
