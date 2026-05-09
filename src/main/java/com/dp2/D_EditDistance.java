@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class D_EditDistance {
 
+    /**
+     * <a href="https://leetcode.com/problems/edit-distance/description/">72. Edit Distance</a>
+     * <br/>
+     * <a href="https://www.youtube.com/watch?v=fJaKO8FbDdo&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=34">Video solution link</a>
+     */
     public int minDistance(String word1, String word2) {
         int n = word1.length();
         int m = word2.length();
