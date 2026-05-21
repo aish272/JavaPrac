@@ -9,7 +9,7 @@ public class A_KthLargestElement {
      * <br/>
      * <a href="https://takeuforward.org/plus/dsa/problems/k-th-largest-element-in-an-array?category=heaps&subcategory=theory-and-implementation&tab=editorial">Video solution link</a>
      */
-    public int findKthLargest(int[] nums, int k) {
+    public static int findKthLargest(int[] nums, int k) {
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int i = 0; i < k; i++) {
@@ -23,6 +23,10 @@ public class A_KthLargestElement {
         }
         return pq.peek();
 
+    }
+
+    public static void main(String[] args) {
+        findKthLargest(new int[]{2,5,7,3,8,5,22,90}, 3);
     }
 
 }
