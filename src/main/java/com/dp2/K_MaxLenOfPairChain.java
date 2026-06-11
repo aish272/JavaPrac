@@ -20,12 +20,10 @@ public class K_MaxLenOfPairChain {
     }
 
     public static int getLongestChain(int[][] pairs, int index, int prev, int[][] dp) {
-        if (index == pairs.length)
-            return 0;
+        if (index == pairs.length) return 0;
 
         if (prev > -1) {
-            if (dp[index][prev] != -1)
-                return dp[index][prev];
+            if (dp[index][prev] != -1) return dp[index][prev];
         }
         int pick = 0;
         if (prev == -1 || pairs[prev][1] < pairs[index][0]) {
@@ -38,6 +36,10 @@ public class K_MaxLenOfPairChain {
             dp[index][prev] = Math.max(pick, notPick);
         }
         return Math.max(pick, notPick);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(findLongestChain(new int[][]{{1, 2}, {7, 8}, {4, 5}}));
     }
 
     public int findLongestChainTab(int[][] pairs) {
@@ -56,14 +58,10 @@ public class K_MaxLenOfPairChain {
                 }
             }
         }
-        if (maxLen == Integer.MIN_VALUE)
-            return 1;
+        if (maxLen == Integer.MIN_VALUE) return 1;
         return maxLen;
 
     }
 
 
-    public static void main(String[] args) {
-        System.out.println(findLongestChain(new int [][] {{1,2},{7,8},{4,5}}));
-    }
 }
