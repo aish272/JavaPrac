@@ -71,6 +71,30 @@ public class Y_LongestIncreasingSubsequence {
         return Math.max(pick, notPick);
     }
 
+
+    /**
+     * <a href="https://www.youtube.com/watch?v=h9rm4N8XbL0&list=PLpIkg8OmuX-JhFpkhgrAwZRtukO0SkwAt&index=12">Video solution link</a>
+     */
+    public int lengthOfLISTab(int[] nums) {
+
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp, 1);
+        int maxLen = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[j] < nums[i]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                    maxLen = Math.max(maxLen, dp[i]);
+                }
+            }
+        }
+        if (maxLen == Integer.MIN_VALUE)
+            return 1;
+        else
+            return maxLen;
+
+    }
+
     public static void main(String[] args) {
         lengthOfLIS2(new int[]{10,9,2,5,3,7,101,18});
     }
